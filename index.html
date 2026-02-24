@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+  <meta charset="UTF-8">
+  <title>Spotify Clone</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: white;
+    }
+
+    /* MAIN LAYOUT */
+    .main {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 220px;
+      background-color: #000;
+      padding: 20px;
+      flex-shrink: 0;
+    }
+
+    /* SPOTIFY LOGO */
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 140px;
+    }
+
+    .sidebar h3 {
+      margin-bottom: 15px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #b3b3b3;
+    }
+
+    .sidebar .item {
+      padding: 10px 0;
+      cursor: pointer;
+      color: #b3b3b3;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .sidebar .item:hover {
+      color: white;
+    }
+
+    /* CONTENT AREA */
+    .content {
+      flex: 1;
+      padding: 20px 30px;
+      overflow-y: auto;
+      background: linear-gradient(to bottom, #1f1f1f, #121212);
+    }
+
+    /* SEARCH BAR */
+    .search-container {
+      margin-bottom: 30px;
+    }
+    
+    .search-bar {
+      width: 100%;
+      max-width: 300px;
+      padding: 12px 20px;
+      border-radius: 50px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      background-color: white;
+      color: #000;
+    }
+
+    /* SECTION HEADERS */
+    h2 {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    /* CARD GRID */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    /* CARD */
+    .card {
+      background-color: #181818;
+      padding: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card:hover {
+      background-color: #282828;
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 1/1; /* Keeps images square */
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      margin-bottom: 16px;
+    }
+
+    .card h4 {
+      margin: 0;
+      font-size: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #fff;
+    }
+
+    .card p {
+      margin: 8px 0 0;
+      font-size: 13px;
+      color: #a7a7a7;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="main">
+
+  <div class="sidebar">
+    <div class="logo">
+      <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="Spotify">
+    </div>
+
+    <h3>Your Library</h3>
+    <div class="item">Liked Songs</div>
+    <div class="item">Global Top 50</div>
+    <div class="item">Trending India</div>
+    <div class="item">Punjabi 101</div>
+    <div class="item">Tamil Hits</div>
+    <div class="item">K-Pop Fresh</div>
+  </div>
+
+  <div class="content">
+
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-bar"
+        placeholder="Search for Songs, Artists, or Languages..."
+      >
+    </div>
+
+    <h2>Top Songs (All Languages)</h2>
+    <div class="cards-container">
+      
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/Hi_Nanna_poster.jpg">
+        <h4>GAJU BOMMA</h4>
+        <p>HI NANA</p>
+      </div>
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFUkopWc-SU6En4d3tjBZye0d8-RNP67BPsgo80QvD_A&sx">
+        <h4>Kadalalle</h4>
+        <p>Dear Comrade</p>
+      </div>
+
+       <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d0000b27372a77d038887cdc425f5ee55">
+        <h4>Tauba Tauba</h4>
+        <p>Karan Aujla • Punjabi</p>
+      </div>
+
+      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d0000b273934d4719b671a525df1f98d1">
+        <h4>Manasilaayo</h4>
+        <p>Anirudh Ravichander • Tamil</p>
+      </div>
+
+      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d0000b27367c337b5883500d07204f051">
+        <h4>Illuminati</h4>
+        <p>Dabzee • Malayalam</p>
+      </div>
+
+      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d0000b273641b089552140a3f91522f21">
+        <h4>Aaj Ki Raat</h4>
+        <p>Stree 2 • Hindi</p>
+      </div>
+
+      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d0000b273659cd4673230913b3918e0d5">
+        <h4>Espresso</h4>
+        <p>Sabrina Carpenter • English</p>
+      </div>
+
+      <div class="card">
+        <img src="https://i.scdn.co/image/ab67616d0000b273b1c4b76e23414c91a5752c0c">
+        <h4>Chuttamalle</h4>
+        <p>Devara • Telugu</p>
+      </div>
+
+    </div>
+    
+    <h2>Popular Artists</h2>
+    <div class="cards-container">
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQxKI1zAM7pHh6WwRIVhu3Wn2w0sIU2V_At4cQK3qTc-6jKYd3GcZIXTmtrljo-i3h9i09cYibH8wowjZ1dIZl-3F0lI-mAPr-_mA85cY0&s=10">
+        <h4>Sid Sriram</h4>
+        <p>Artist</p>
+      </div>
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRETraqkav99oDFbUFGsbCDZl0Mteg_X51A8QGEdAE7vwEtf5WxDLa__Nl6HP71zQTFI7scIFhdXe-HvmMlZTX9grvaQBvTHDmR8-dRxiCzGQ&s=10">
+        <h4>Arijit Singh</h4>
+        <p>Artist</p>
+      </div>
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOuabkKiRcnOf8Q7Ts5vcpMkbL6w4_Kk6SEoES4ujMMz2YfIsuXeDpuk5DMk05KG6yV65FXRh5ixk8rxrUyD6udNng6r6-1kCH1qpMxaiP&s=10">
+        <h4>A.R. Rahman</h4>
+        <p>Artist</p>
+      </div>
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6A7d3f8f2-d8_i1_hH2G6g-0_o1_q2_r3_s4_t5_u6_v7&s=10">
+        <h4>Anirudh</h4>
+        <p>Artist</p>
+      </div>
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7_i1_j2_k3_l4_m5_n6_o7_p8_q9_r0_s1_t2&s=10">
+        <h4>SPB</h4>
+        <p>Artist</p>
+      </div>
+
+       <div class="card">
+        <img src="https://i.scdn.co/image/ab6761610000517403160e1d169c37255474c522">
+        <h4>Karan Aujla</h4>
+        <p>Artist</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const searchInput = document.getElementById("searchInput");
+  const cards = document.querySelectorAll(".card"); // Selects both artists and songs
+  const sidebarItems = document.querySelectorAll(".sidebar .item");
+
+  searchInput.addEventListener("keyup", () => {
+    const value = searchInput.value.toLowerCase();
+
+    // Search through all cards (Artists & Songs)
+    cards.forEach(card => {
+      const cardTitle = card.querySelector("h4").innerText.toLowerCase();
+      const cardSub = card.querySelector("p").innerText.toLowerCase();
+      
+      if(cardTitle.includes(value) || cardSub.includes(value)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    // Search Sidebar items
+    sidebarItems.forEach(item => {
+      item.style.display =
+        item.innerText.toLowerCase().includes(value) ? "block" : "none";
+    });
+  });
+</script>
+
+</body>
+</html>
